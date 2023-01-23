@@ -8,9 +8,3 @@ services:
     build:
       context: .
       dockerfile: StorageCrud/Dockerfile
-    ports:
-      - 5011:5011
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    volumes:
-      - ~/.vsdbg:c:\remote_debugger:rw

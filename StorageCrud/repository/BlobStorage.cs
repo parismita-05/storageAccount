@@ -7,7 +7,7 @@ namespace StorageCrud.repository
 {
     public class BlobStorage
     {
-        static string connectionstring = "DefaultEndpointsProtocol=https;AccountName=storageprj301;AccountKey=FkPY8HRBI11ze2fkDkW6Ihwt8ZF66EdgLwJW/V27QlD+sK3BJ3XF+DUdEGf+xYCuji63LFTF4W1m+ASt0Lo5PA==;EndpointSuffix=core.windows.net";
+        static string connectionstring = "DefaultEndpointsProtocol=https;AccountName=storageprj301;AccountKey=ZVsBtLwOTLm3pUPP8ra4gxqasceMqjoOjyVxs7UdZBEQV7GF4PqkfD7eXhSDRnwad08DOfCzERzx+ASt66SsAw==;EndpointSuffix=core.windows.net";
         public static async Task CreateBlob(string blobName)
         {
             if(string.IsNullOrEmpty(blobName))

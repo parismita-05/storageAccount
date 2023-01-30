@@ -63,7 +63,7 @@ namespace StorageCrud.repository
             }
             public static async Task DownloadFiles(string directoryName,string fileShareName,string fileName)
             {
-                string path = @"C:\Users\vmadmin\Desktop\storageAcc\StorageCrud\download\"+fileName;
+                string path = @"C:\Users\vmadmin\Desktop\STORAGEACC\StorageCrud\download\"+fileName;
                 shareServiceClient = new ShareServiceClient(connectionstring);
                 var serviceClient = shareServiceClient.GetShareClient(fileShareName);
                 var dir = serviceClient.GetDirectoryClient(directoryName);

@@ -7,7 +7,7 @@ namespace StorageCrud.repository
 {
     public class BlobStorage
     {
-        static string connectionstring = "DefaultEndpointsProtocol=https;AccountName=storageaccprj;AccountKey=+sBhcRbSXPIz8birei7uZ2zFWzwNHJ4hFrcR7g4s6xO2jHqiSAPilyQSDl2rLtV1TsVGgcYilH/V+AStt7IURw==;EndpointSuffix=core.windows.net";
+        static string connectionstring = "DefaultEndpointsProtocol=https;AccountName=joshistorage;AccountKey=3S0lrx570+01V0KBBCmdyzauyB5XV4OA/Ap7h+xYWfp7MePDVvWfDZDWwBS83UkampzlBmaXBbPZ+ASt1GjQfQ==;EndpointSuffix=core.windows.net";
         public static async Task CreateBlob(string blobName)
         {
             if(string.IsNullOrEmpty(blobName))
@@ -115,7 +115,7 @@ namespace StorageCrud.repository
         public static async Task<BlobProperties> DownloadBlob(string blobName,string file)
         {
             try{
-                string Path = @"C:\Users\vmadmin\Desktop\StorageCrud\StorageCrud\download\"+blobName;
+                string Path = @"C:\Users\vmadmin\Desktop\storageAcc\StorageCrud\Downloads\"+blobName;
                 BlobContainerClient container = new BlobContainerClient(connectionstring,blobName);
                 BlobClient client = container.GetBlobClient(file);
                 await client.DownloadToAsync(Path);

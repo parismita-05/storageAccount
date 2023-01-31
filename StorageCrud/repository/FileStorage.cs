@@ -4,7 +4,7 @@ namespace StorageCrud.repository
 {
     public class FileStorage
     {
-        static string connectionstring ="DefaultEndpointsProtocol=https;AccountName=storageaccprj;AccountKey=+sBhcRbSXPIz8birei7uZ2zFWzwNHJ4hFrcR7g4s6xO2jHqiSAPilyQSDl2rLtV1TsVGgcYilH/V+AStt7IURw==;EndpointSuffix=core.windows.net";
+        static string connectionstring ="DefaultEndpointsProtocol=https;AccountName=joshistorage;AccountKey=3S0lrx570+01V0KBBCmdyzauyB5XV4OA/Ap7h+xYWfp7MePDVvWfDZDWwBS83UkampzlBmaXBbPZ+ASt1GjQfQ==;EndpointSuffix=core.windows.net";
         static ShareServiceClient shareServiceClient;
         public static async Task CreateFile(string fileName)
         {
@@ -63,7 +63,7 @@ namespace StorageCrud.repository
             }
             public static async Task DownloadFiles(string directoryName,string fileShareName,string fileName)
             {
-                string path = @"C:\Users\vmadmin\Desktop\STORAGEACC\StorageCrud\download\"+fileName;
+                string path = @"C:\Users\vmadmin\Desktop\storageAcc\StorageCrud\Downloads\"+fileName;
                 shareServiceClient = new ShareServiceClient(connectionstring);
                 var serviceClient = shareServiceClient.GetShareClient(fileShareName);
                 var dir = serviceClient.GetDirectoryClient(directoryName);

@@ -4,7 +4,7 @@ namespace StorageCrud.repository
 {
     public class Queue
     {
-        static string connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccprj;AccountKey=+sBhcRbSXPIz8birei7uZ2zFWzwNHJ4hFrcR7g4s6xO2jHqiSAPilyQSDl2rLtV1TsVGgcYilH/V+AStt7IURw==;EndpointSuffix=core.windows.net";
+        static string connectionString = "DefaultEndpointsProtocol=https;AccountName=joshistorage;AccountKey=3S0lrx570+01V0KBBCmdyzauyB5XV4OA/Ap7h+xYWfp7MePDVvWfDZDWwBS83UkampzlBmaXBbPZ+ASt1GjQfQ==;EndpointSuffix=core.windows.net";
         public static async Task<bool> CreateQueue(string queueName)
         {
             if(string.IsNullOrEmpty(queueName))
